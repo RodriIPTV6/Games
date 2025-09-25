@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jeux Gratuits - Navigateur</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #f1c40f;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 20px 0;
+      gap: 15px;
+    }
+
+    .btn {
+      background: #3498db;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1em;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #2980b9;
+    }
+
+    iframe {
+      width: 95%;
+      height: 600px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #000;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background: #1f1f1f;
+      color: #aaa;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎮 Mes Jeux Navigateurs</h1>
+  </header>
+
+  <div class="buttons">
+    <button class="btn" onclick="lancerJeu('eaglercraft/index.html')">🪓 Eaglercraft (Minecraft)</button>
+    <button class="btn" onclick="lancerJeu('subway/index.html')">🏃 Subway Surfers</button>
+  </div>
+
+  <div id="zone-jeu">
+    <p>Choisis un jeu pour commencer à jouer.</p>
+  </div>
+
+  <footer>
+    <p>Jeux non affiliés à Mojang ou Kiloo. Projet éducatif.</p>
+  </footer>
+
+  <script>
+    function lancerJeu(url) {
+      document.getElementById("zone-jeu").innerHTML = `<iframe src="${url}" title="Jeu"></iframe>`;
+    }
+  </script>
+
+</body>
+</html>
